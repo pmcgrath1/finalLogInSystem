@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block the_body %}
+
+
+<form action='/logout' method='POST'>
+
+
+
+<h1>Welcome to page 3</h1>
+<h4>If you can see this page then you are logged in</h4>
+<div id="centerbuttons">
+<input type='submit' value='Log Out'>
+</div>
+</form>
+<br><br>
+<div id="link-container">
+<a href="page1">Page 1</a>
+<br>
+<a href="page2">Page 2</a>
+</div>
+{% endblock %}

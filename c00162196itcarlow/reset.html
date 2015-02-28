@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block the_body %}
+
+
+<h4>{{emptyUserid}}</h4>
+<h4>{{emptyUserAddress}}</h4>
+<h4>{{wrongEmail}}</h4>
+
+<form action='/resetpassword' method='POST'>
+
+<label>User-id:</label> 
+<input type='text' name='userid' placeholder='Username'>
+
+<label>Email address:</label> 
+<input type='email' name='email' placeholder='Email'>
+
+<br><br>
+<div id="centerbuttons1">
+
+<input type='submit' value='Reset Password'>
+</div>
+</form>
+<br><br>
+<div id="link-container">
+<a href="/">Home</a>
+</div>
+
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block the_body %}
+
+
+<h4>{{ UserNameError}}</h4>
+<h4>{{passwordError}}</h4>
+<h4>{{userNameUsed}}</h4>
+<h4>{{passwordMismatch}}</h4>
+<h4>{{emptyPassword}}</h4>
+<h4>{{emptyPassword2}}</h4>
+<h4>{{invalidEmail}}</h4>
+<h4>{{invalidPassWordFormat}}</h4>
+<h4>{{passwordToShort}}</h4>
+<h4>{{usernameFormatError}}</h4>
+<h4>{{userNameSpaceError}}</h4>
+
+<form action='/processreg' method='POST'>
+
+<label>User-id: </label>
+<input type='text' name='userid' value="{{userid}}" placeholder='Username' >
+
+<label>Email</label>
+<input type='email' name='email' value="{{email}}" placeholder='Email' >
+
+<label>Password:</label> 
+<input type='password' name='passwd' placeholder='Uppercase' >
+
+<label>Password (again):</label> 
+<input type='password' name='passwd2' placeholder='Password' >
+<br><br>
+<div id="centerbuttons">
+<input type='submit' value='Register' class="button">
+</div>
+<br>
+</form>
+<div id="link-container">
+<a href="/">Home</a>
+
+</div>
+
+{% endblock %}

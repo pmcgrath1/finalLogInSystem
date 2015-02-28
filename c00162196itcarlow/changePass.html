@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block the_body %}
+
+
+<h4>{{invalidPassWordFormat}}</h4>
+<h4>{{passwordToShort}}</h4>
+<h4>{{passwordMismatch}}</h4>
+<h4>{{emptyPassword}}</h4>
+<h4>{{emptyPassword1}}</h4>
+<h4>{{wrongUserName}}</h4>
+<h4>{{wrongVerifyNum}}</h4>
+
+<form action='/changepassword' method='POST'>
+
+<label>User_ID </label>
+<input type='text' name='userid' value="{{userid}}" placeholder='Username'>
+
+<label>Verification number:</label>
+<input type='text' name='number' value ="{{number}}" placeholder='Verification number'>
+
+<label>New Password: </label>
+<input type='password' name='newpasswd' placeholder='Password'>
+
+<label>Password again:</label>
+ <input type='password' name='newpasswd1' placeholder='Password'>
+<br><br>
+<div id="centerbuttons1">
+
+<input type='submit' value='Reset Password'>
+</div>
+</form>
+
+{% endblock %}
